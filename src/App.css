@@ -1,41 +1,197 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #1e1e1e;
+  color: white;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", serif;
+}
+.container {
+  /* border: red solid 1px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
+.popular {
+  /* border: purple solid 1px; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.compare {
+  margin-left: 5px;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.FromText {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 3px;
+}
+.CurrentRate {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: rgba(51, 187, 255, 0.7);
+  margin-bottom: 5px;
+}
+.ToText {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 7px;
+}
+.RefreshTime {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.rectangle {
+  box-sizing: border-box;
+  width: 409px;
+  height: 56px;
+  left: 290px;
+  top: 307px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.amount {
+  margin-left: 20px;
+}
+.small-line {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 30px;
+  transform: rotate(90deg);
+  margin-left: auto;
+}
+.currency {
+  margin-right: 20px;
+  margin-left: auto;
+}
+.from-rect {
+  margin-bottom: 40px;
+}
+.popular-card {
+  margin: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 160px;
+  height: 72px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.popular-coin {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.popular-coin-amount {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 860px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
-  to {
-    transform: rotate(360deg);
+  .main {
+    /* border: white solid 1px; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .chart {
+    /* border: green solid 1px; */
+    height: 100%;
+    width: 100%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .popular-container {
+    /* border: purple solid 1px; */
+    height: 100%;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 859px) {
+  .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
   }
-}
+  .main {
+    /* border: white solid 1px; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .chart {
+    /* border: green solid 1px; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .popular-container {
+    /* border: purple solid 1px; */
+    height: 100%;
+    /* width: 100%; */
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    white-space: initial;
+  }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .popular {
+    /* border: purple solid 1px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
